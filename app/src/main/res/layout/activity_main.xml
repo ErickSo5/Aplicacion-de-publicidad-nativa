@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F3EBDD"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Encabezado -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Mi Recetario"
+            android:textColor="#65452F"
+            android:textSize="27sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📖"
+            android:textSize="28sp" />
+
+    </LinearLayout>
+
+    <!-- Página de receta -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFDF7"
+            android:padding="18dp">
+
+            <TextView
+                android:id="@+id/recipe_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RECETA 01"
+                android:textColor="#A66C3F"
+                android:textStyle="bold"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/recipe_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hotcakes caseros"
+                android:textColor="#65452F"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/recipe_emoji"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:gravity="center"
+                android:text="🥞"
+                android:textSize="76sp"
+                android:background="#F3EBDD"
+                android:layout_marginTop="14dp" />
+
+            <TextView
+                android:id="@+id/recipe_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="20 minutos · Fácil · 2 porciones"
+                android:textColor="#92745B"
+                android:textSize="13sp"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingredientes"
+                android:textColor="#65452F"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/recipe_ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• 1 taza de harina\n• 1 huevo\n• ¾ taza de leche\n• 1 cucharada de azúcar"
+                android:textColor="#594B40"
+                android:textSize="15sp"
+                android:lineSpacingExtra="5dp"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Preparación"
+                android:textColor="#65452F"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/recipe_preparation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mezcla los ingredientes, vierte porciones en una sartén caliente y cocina por ambos lados hasta dorar."
+                android:textColor="#594B40"
+                android:textSize="15sp"
+                android:lineSpacingExtra="5dp"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Navegación entre páginas -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingVertical="10dp">
+
+        <Button
+            android:id="@+id/btn_previous"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="Anterior"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#A66C3F" />
+
+        <TextView
+            android:id="@+id/page_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 / 3"
+            android:textColor="#65452F"
+            android:textStyle="bold"
+            android:paddingHorizontal="16dp" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="Siguiente"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#A66C3F" />
+
+    </LinearLayout>
+
+    <!-- Conservamos el contenedor de AdMob -->
+    <FrameLayout
+        android:id="@+id/native_ad_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>
